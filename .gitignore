@@ -1,0 +1,31 @@
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Built app bundle and distribution
+LittleTask.app
+TinyTask.app
+*.dmg
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Website build
+website/dist/
+website/node_modules/ 
