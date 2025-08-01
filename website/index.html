@@ -251,19 +251,12 @@
                     Download for Mac
                 </a>
                 
-                <div style="margin-top: 10px;">
-                    <select id="downloadFormat" style="background: rgba(255,255,255,0.9); border: 1px solid #ccc; border-radius: 8px; padding: 8px 12px; font-size: 0.9rem;">
-                        <option value="dmg">DMG Installer (Recommended)</option>
-                        <option value="zip">ZIP Archive</option>
-                    </select>
-                </div>
-                
                 <div class="version-info">
-                    Version 1.0.0 • macOS 13.0+ • Free
+                    Version 1.0.0 • macOS 13.0+ • Free • ZIP Archive
                 </div>
                 
                 <div class="alert">
-                    <strong>⚠️ Important:</strong> You'll need to grant Accessibility permissions after installation. Don't worry - we'll guide you through it!
+                    <strong>📦 Installation:</strong> Download the ZIP file, extract it, and drag LittleTask.app to your Applications folder. You'll need to grant Accessibility permissions when you first run it.
                 </div>
             </div>
         </div>
@@ -354,10 +347,6 @@
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Get selected format
-            const format = document.getElementById('downloadFormat').value;
-            const fileName = format === 'dmg' ? 'LittleTask-v1.0.0.dmg' : 'LittleTask-v1.0.0.zip';
-            
             // Show download starting message
             const btn = this;
             const originalText = btn.innerHTML;
@@ -368,10 +357,10 @@
             setTimeout(() => {
                 btn.innerHTML = '<span>✅</span> Download Started!';
                 
-                // Create a temporary link to download the file
+                // Create a temporary link to download the ZIP file
                 const link = document.createElement('a');
-                link.href = `./${fileName}`;
-                link.download = fileName;
+                link.href = './LittleTask-v1.0.0.zip';
+                link.download = 'LittleTask-v1.0.0.zip';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
